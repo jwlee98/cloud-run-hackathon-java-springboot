@@ -57,10 +57,10 @@ public class Application {
   public String index(@RequestBody ArenaUpdate arenaUpdate) {
     System.out.println(arenaUpdate);
 
-    String[] moves = new String[]{"F", "R", "L"};
-    int i = new Random().nextInt(3);
-    String[] commands = new String[]{"F", "R", "L", "T", "T", "T", "T", "T", "T", "T", "T", "F", "R", "L","T", "T", "T", "T", "T", "T", "T"};
-    int j = new Random().nextInt(21);
+    String[] moves = new String[]{"F", "R", "F", "L"};
+    int i = new Random().nextInt(4);
+    String[] commands = new String[]{"F", "R", "T", "T", "T", "T", "T", "T", "T", "T", "F", "L","T", "T", "T", "T", "T", "T", "T", "T"};
+    int j = new Random().nextInt(20);
 
     PlayerState playstate01 = arenaUpdate.arena.state.get("https://cloud-run-hackathon-java-springboot-4dnmcw5raa-uc.a.run.app");
     
