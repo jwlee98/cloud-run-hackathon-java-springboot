@@ -62,7 +62,7 @@ public class Application {
     String[] commands = new String[]{"F", "R", "L", "T", "T", "T", "T", "T", "T", "T", "T", "F", "R", "L","T", "T", "T", "T", "T", "T", "T"};
     int j = new Random().nextInt(21);
 
-    PlayerState playstate01 = arenaUpdate.arena.state.get("https://cloud-run-hackathon-java-springboot-4dnmcw5raa-uc.a.run.app/");
+    PlayerState playstate01 = arenaUpdate.arena.state.get("https://cloud-run-hackathon-java-springboot-4dnmcw5raa-uc.a.run.app");
     
     // TODO add your implementation here to replace the random response. 
     if(playstate01.wasHit == true)
