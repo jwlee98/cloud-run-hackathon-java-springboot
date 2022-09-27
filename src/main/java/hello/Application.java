@@ -65,7 +65,6 @@ public class Application {
     int k = new Random().nextInt(9);
 
     PlayerState playstate01 = arenaUpdate.arena.state.get("https://cloud-run-hackathon-java-springboot-4dnmcw5raa-uc.a.run.app");
-    System.out.println("score: " + playstate01.score + " wasHit: " + playstate01.wasHit);
     
     // TODO add your implementation here to replace the random response. 
     //if(playstate01.wasHit == true)
@@ -73,9 +72,15 @@ public class Application {
     //else
 
     if((playstate01.x == 6 || playstate01.x == 7 || playstate01.x == 8) && playstate01.y == 5)
-        return command2[k];
+        {
+            System.out.println("score: " + playstate01.score + " wasHit: " + playstate01.wasHit + " x: " + playstate01.x + " y: " + playstate01.y);
+            return command2[k];
+        } 
     else
-        return commands[j];
+        {
+            System.out.println("score: " + playstate01.score + " wasHit: " + playstate01.wasHit + " x: " + playstate01.x + " y: " + playstate01.y);
+            return commands[j];
+        }
     
   }
 
