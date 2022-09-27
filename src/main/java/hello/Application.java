@@ -71,7 +71,7 @@ public class Application {
     //    return moves[i];
     //else
 
-    if((playstate01.x == 6 || playstate01.x == 7 || playstate01.x == 8) && playstate01.y == 5)
+    if((playstate01.x == 4 || playstate01.x == 5 || playstate01.x == 6) && playstate01.y == 3)
         {
             System.out.println("score: " + playstate01.score + " wasHit: " + playstate01.wasHit + " x: " + playstate01.x + " y: " + playstate01.y);
             return command2[k];
