@@ -56,12 +56,19 @@ public class Application {
   @PostMapping("/**")
   public String index(@RequestBody ArenaUpdate arenaUpdate) {
     System.out.println(arenaUpdate);
-    String[] commands = new String[]{"F", "R", "L", "T"};
-    int i = new Random().nextInt(4);
+
+    String[] moves = new String[]{"F", "R", "L"};
+    int i = new Random().nextInt(3);
+    String[] commands = new String[]{"F", "R", "L", "T", "T", "T", "T", "T", "T", "T", "T", "F", "R", "L","T", "T", "T", "T", "T", "T", "T"};
+    int j = new Random().nextInt(21);
+
+    PlayerState playstate01 = arenaUpdate.arena.state.get("https://cloud-run-hackathon-java-springboot-4dnmcw5raa-uc.a.run.app/");
     
     // TODO add your implementation here to replace the random response. 
-    
-    return commands[i];
+    if(playstate01.wasHit == true)
+        return moves[i];
+    else
+        return commands[j];
   }
 
 }
