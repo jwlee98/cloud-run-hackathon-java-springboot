@@ -57,8 +57,8 @@ public class Application {
   public String index(@RequestBody ArenaUpdate arenaUpdate) {
     //System.out.println("arenaUpdate");
 
-    //String[] moves = new String[]{"F", "R", "F", "L"};
-    //int i = new Random().nextInt(4);
+    String[] moves = new String[]{"F", "R", "F", "L"};
+    int i = new Random().nextInt(4);
     String[] commands = new String[]{"F", "R", "T", "T", "T", "T", "T", "T", "T", "T", "F", "R","T", "T", "T", "T", "T", "T", "T", "T"};
     int j = new Random().nextInt(20);
     String[] command2 = new String[]{"R", "T", "T", "T", "T", "T", "T", "T", "T"};
@@ -72,7 +72,7 @@ public class Application {
     //    return moves[i];
     //else
 
-    if(playstate01.x == 7 && playstate01.y == 5)
+    if((playstate01.x == 6 || playstate01.x == 7 || playstate01.x == 8) && playstate01.y == 5)
         return command2[k];
     else
         return commands[j];
